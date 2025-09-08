@@ -81,9 +81,8 @@ public class ChebyshevSecretSharing {
             // Solve the system of equations using Gaussian elimination
             double[] coefficients = gaussianElimination(matrix, constants);
 
-            // Output the results
-            System.out.println("Decoded roots: " + roots);
-            System.out.println("Constant term C: " + coefficients[k - 1]);
+            // Output only the constant term (rounded to nearest integer)
+            System.out.println((long)coefficients[k - 1]);
         } catch (Exception e) {
             e.printStackTrace();
         }
